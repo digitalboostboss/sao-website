@@ -1,0 +1,519 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2577
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;\f2\fnil\fcharset0 AppleColorEmoji;
+\f3\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue10;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c99942\c98555\c0;\csgray\c0\c0;
+}
+\margl1440\margr1440\vieww16380\viewh18680\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!doctype html>\
+<html lang="es">\
+<head>\
+  <meta charset="utf-8" />\
+  <meta name="viewport" content="width=1200" />\
+  <title>San Antonio On Line - Final</title>\
+\
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">\
+\
+  <style>\
+    :root\{\
+      --orange:#e37d20;\
+      --dark-orange:#c65d08;\
+      --circle-border:#f39c2b;\
+      --box-border:#e9c6a6;\
+\
+    \}\
+    html,body\{height:100%;margin:0;font-family:"Montserrat",sans-serif;background:#fff;color:#333\}\
+    .wrap\{width:1180px;margin:18px auto\}\
+\
+    /* HERO */\
+    .hero\{position:relative;height:220px;border-radius:4px;overflow:hidden;\
+      background:linear-gradient(180deg, rgba(196,85,15,0.9), rgba(196,85,15,0.75)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="300"><rect width="1400" height="300" fill="%23c94f0b"/></svg>') center/cover no-repeat;\
+      padding:18px 28px;display:flex;gap:20px;align-items:flex-start;\
+    \}\
+    .logo-wrap\{flex:0 0 150px;display:flex;align-items:center;justify-content:center\}\
+    .logo\{width:140px;height:140px;border-radius:50%;background:linear-gradient(#f3b16d,#d7791a);border:8px solid #fff;display:flex;align-items:center;justify-content:center\}\
+    .logo .title\{color:#fff;font-weight:800;font-size:20px\}\
+    .logo .subtitle\{color:#fff;font-size:10px\}\
+\
+    .hero-mid\{flex:1;color:#fff;display:flex;flex-direction:column;gap:8px\}\
+    .slogan\{font-family:'Dancing Script',cursive;font-size:34px;margin-top:6px\}\
+    .categories\{display:flex;gap:18px;margin-top:6px;align-items:center\}\
+    .cat\{text-align:center;color:#fff;font-size:12px\}\
+    .cat .icon\{width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;border:6px solid var(--circle-border)\}\
+    .hero-bottom\{margin-top:auto;display:flex;align-items:center;gap:14px\}\
+    .impulso\{flex:1;text-align:center;font-size:20px;font-weight:700;letter-spacing:4px\}\
+    .socials\{display:flex;gap:8px\}\
+    .socials .s\{width:34px;height:34px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--dark-orange);font-weight:700\}\
+\
+    .menu-block\{width:170px;color:#fff;text-align:center;padding-left:18px;border-left:1px solid rgba(255,255,255,0.06)\}\
+    .menu-line\{height:4px;width:60px;background:#fff;margin:6px 0;border-radius:2px;opacity:0.9\}\
+\
+    /* GRID */\
+    .title-row\{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:6px\}\
+    .title-row h2\{margin:0;color:var(--dark-orange);font-size:16px\}\
+    .grid\{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:18px\}\
+\
+    .card\{background:#fff;border:3px solid var(--box-border);padding:14px;position:relative;min-height:260px;box-sizing:border-box;overflow:visible\}\
+    .badge-basket\{position:absolute;left:18px;top:14px;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff;border:6px solid var(--circle-border);font-size:20px;color:var(--dark-orange)\}\
+    .prod-circle\{width:160px;height:160px;border-radius:50%;border:8px solid var(--circle-border);display:flex;align-items:center;justify-content:center;margin:18px auto 10px;background:#fff;overflow:hidden;box-sizing:border-box\}\
+    .prod-img\{width:260px;height:260px;object-fit:cover;object-position:center;display:block\}\
+\
+    /* We use the sprite image (product sheet). The .prod-img.* classes set object-position to sample a cell. */\
+    .prod-img.sheet\{ width:260px; height:260px; object-fit:cover; object-position:center; \}\
+\
+    /* approximate object-position values for 6x2 grid (top row then bottom) */\
+    .p1 \{ object-position: 8% 18%; \}   /* top row col1 */\
+    .p2 \{ object-position: 25% 18%; \}  /* top row col2 */\
+    .p3 \{ object-position: 42% 18%; \}  /* top row col3 */\
+    .p4 \{ object-position: 59% 18%; \}  /* top row col4 */\
+    .p5 \{ object-position: 76% 18%; \}  /* top row col5 */\
+    .p6 \{ object-position: 93% 18%; \}  /* top row col6 */\
+\
+    .p7 \{ object-position: 8% 82%; \}   /* bottom row col1 */\
+    .p8 \{ object-position: 25% 82%; \}\
+    .p9 \{ object-position: 42% 82%; \}\
+    .p10\{ object-position: 59% 82%; \}\
+    .p11\{ object-position: 76% 82%; \}\
+    .p12\{ object-position: 93% 82%; \}\
+\
+    .stars\{position:absolute;left:10px;top:72px;display:flex;flex-direction:column;gap:10px\}\
+    .stars .star\{color:#f39c2b;font-size:10px\}\
+    .prod-title\{margin:0;font-size:13px;color:var(--dark-orange);font-weight:700;line-height:1.1;text-transform:uppercase;height:36px;overflow:hidden\}\
+    .prod-price\{color:#0b66b8;font-size:16px;font-weight:800;margin-top:6px\}\
+\
+    .store-badge\{position:absolute;right:12px;bottom:14px;width:54px;height:36px;border-radius:50%;background:#fff;border:4px solid #f0f0f0;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--dark-orange);overflow:hidden\}\
+\
+    /* store-logo element uses the logos sprite; .logo-img.X sets object-position */\
+    .logo-img\{ width:80px; height:80px; object-fit:cover; object-position:center; display:block; \}\
+\
+    /* approximate object-position coordinates for the logos sheet (4 columns x 4 rows layout sampled) */\
+    .l1  \{ object-position: 8% 8%; \}   .l2  \{ object-position: 28% 8%; \}  .l3  \{ object-position: 48% 8%; \}  .l4  \{ object-position: 68% 8%; \}  .l5  \{ object-position: 88% 8%; \}\
+    .l6  \{ object-position: 8% 28%; \}  .l7  \{ object-position: 28% 28%; \} .l8  \{ object-position: 48% 28%; \} .l9  \{ object-position: 68% 28%; \} .l10 \{ object-position: 88% 28%; \}\
+    .l11 \{ object-position: 8% 48%; \}  .l12 \{ object-position: 28% 48%; \} .l13 \{ object-position: 48% 48%; \} .l14 \{ object-position: 68% 48%; \} .l15 \{ object-position: 88% 48%; \}\
+\
+    .hashtags\{margin-top:16px;color:#b19b86;font-size:12px;border-top:1px solid #f0e6e0;padding-top:12px\}\
+    .footer\{margin-top:10px;padding:8px 10px;background:#f7f7f7;font-size:12px;color:#8a8a8a;text-align:center;border-radius:4px\}\
+    a.card-link\{ color:inherit; text-decoration:none; display:block; height:100% \}\
+    /* small accessibility highlight on hover */\
+    .card:hover\{box-shadow:0 6px 18px rgba(0,0,0,0.06);transform:translateY(-2px);transition:all .18s ease\}\
+  </style>\
+</head>\
+<body>\
+  <div class="wrap">\
+\
+    <!-- HERO -->\
+    <header class="hero">\
+      <div class="logo-wrap">\
+        <div class="logo">\
+          <div>\
+            <div class="title">San Antonio</div>\
+            <div class="subtitle">ON LINE</div>\
+          </div>\
+        </div>\
+      </div>\
+\
+      <div class="hero-mid">\
+        <div class="slogan">Simplificamos tu b\'fasqueda / Facilitamos tu compra / Lo que quieres, aqu\'ed lo encuentras!</div>\
+\
+        <div class="categories" aria-hidden="true">\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \cb3 \expnd0\expndtw0\kerning0
+	 <div class="category"><img src="assets/icons/SAO P1 ICONO HOGAR.svg" alt="Hogar"><span>Hogar</span></div>\
+      <div class="category"><img src="assets/icons/SAO P1 ICONO TECNOLOGIA.svg" alt="Tecnolog\'eda"><span>Tecnolog\'eda</span></div>\
+      <div class="category"><img src="assets/icons/SAO P1 ICONO VEHICULOS.svg" alt="Veh\'edculos"><span>Veh\'edculos</span></div>\
+      <div class="category"><img src="assets/icons/SAO P1 ICONO BIENESTAR.svg" alt="Bienestar"><span>Bienestar</span></div>
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0              </div>\
+\
+        <div class="hero-bottom">\
+          <div class="impulso">IMPULSANDO EL COMERCIO LOCAL</div>\
+          <div class="socials">\
+            <div class="s">f</div>\
+            <div class="s">x</div>\
+            <div class="s">ig</div>\
+            <div class="s">yt</div>\
+          </div>\
+        </div>\
+      </div>\
+\
+      <div class="menu-block">\
+        <div>ELIGE<br/>COMPRA<br/>DISFRUTA</div>\
+        <div style="margin-top:14px;font-size:22px;">MENU</div>\
+        <div style="margin-top:10px">\
+          <div class="menu-line" style="width:66px"></div>\
+          <div class="menu-line" style="width:48px"></div>\
+          <div class="menu-line" style="width:78px"></div>\
+        </div>\
+      </div>\
+    </header>\
+\
+    <section class="grid" aria-label="Productos">\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \cb3       <!-- Product 1 -->\cb1 \
+      <article class="card">\
+        <a class="card-link" href=\cb3 "https://www.abc.cl/led-32%E2%80%9D-aoc-32s5045-roku-tv-smart-tv-hd/27994768.html" \cb1 target="_blank" rel="noopener">\
+          <div class="badge-basket">
+\f2 \uc0\u55357 \u57042 
+\f0 </div>\
+          <div class="stars" aria-hidden="true"><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div></div>\
+\
+          <div class="prod-circle">\
+            <!-- product-sheet sprite used here; .p1 samples first cell -->\
+            <img class="prod-img sheet p1" src="\cb3 SAO PP01.svg\cb1 \'94 alt="SMART TV ROKU 32\'94 LED AOC">\
+          </div>\
+\
+          <h3 class="prod-title">\cb3 SMART TV ROKU 32\'94 LED AOC\cb1 </h3>\
+          <div class="prod-price">\cb3 $129.990\cb1 </div>\
+\
+          <div class="store-badge">\
+            <img class="logo-img l1" src="\cb3 SAO P1 LOGO ABCDIN.svg\cb1 \'94 alt=\'93\cb3 Abcdin logo\cb1 \'94>\
+          </div>\
+        </a>\
+      </article>\
+\
+ \cb3      <!-- Product 2 -->\cb1 \
+      <article class="card">\
+        <a class="card-link" href="\cb3 https://www.abc.cl/serum-regenerador-de-argan-sheet/26753651.html"\cb1  target="_blank" rel="noopener">\
+          <div class="badge-basket">
+\f2 \uc0\u55357 \u57042 
+\f0 </div>\
+          <div class="stars" aria-hidden="true"><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div></div>\
+\
+          <div class="prod-circle">\
+            <img class="prod-img sheet p2" src=\'93\cb3 SAO PP02.svg\cb1 \'94 alt=\'93\cb3 SERUM ARG\'c1N SHEET\cb1 \'94>\
+          </div>\
+\
+          <h3 class="prod-title">\cb3 SERUM ARG\'c1N SHEET\cb1 </h3>\
+          <div class="prod-price">\cb3 $11.990\cb1 </div>\
+\
+          <div class="store-badge">\
+            <img class="logo-img l6" src="\cb3 SAO P1 LOGO ABCDIN.svg\cb1 \'94 alt=\'93\cb3 Abcdin logo\cb1 \'94>\
+          </div>\
+        </a>\
+      </article>\
+\
+\cb3       <!-- Product 3 -->\cb1 \
+      <article class="card">\
+        <a class="card-link" href="\cb3 https://www.instagram.com/carnes.miltil.2/\cb1 " target="_blank" rel="noopener">\
+          <div class="badge-basket">
+\f2 \uc0\u55357 \u57042 
+\f0 </div>\
+          <div class="stars" aria-hidden="true"><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div></div>\
+\
+          <div class="prod-circle">\
+            <img class="prod-img sheet p3" src="\cb3 SAO PP03.svg\cb1 \'94 alt=\'93\cb3 CARNICER\'cdA CARNES MILTIL2\cb1 \'94>\
+          </div>\
+\
+          <h3 class="prod-title">\cb3 CARNICER\'cdA CARNES MILTIL2\cb1 </h3>\
+          <div class="prod-price">\cb3 SAN ANTONIO\cb1 </div>\
+\
+          <div class="store-badge">\
+            <img class="logo-img l3" src=\'93\cb3 SAO P1 LOGO CARNESMILTIL.svg\cb1 \'94 alt=\'93\cb3 CarnesMiltil logo\cb1 \'94>\
+          </div>\
+        </a>\
+      </article>\
+\
+\cb3       <!-- Product 4 -->\cb1 \
+      <article class="card">\
+        <a class="card-link" href="\cb3 https://www.paris.cl/depiladora-gama-skin-pro-go-2-597749999.html\cb1 " target="_blank" rel="noopener">\
+          <div class="badge-basket">
+\f2 \uc0\u55357 \u57042 
+\f0 </div>\
+          <div class="stars" aria-hidden="true"><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div></div>\
+\
+          <div class="prod-circle">\
+            <img class="prod-img sheet p4" src="\cb3 SAO PP04.svg\cb1 \'94 alt=\'93\cb3 DEPILADORA GO2 GAMA\cb1 \'94>\
+          </div>\
+\
+          <h3 class="prod-title">\cb3 DEPILADORA GO2 GAMA\cb1 </h3>\
+          <div class="prod-price">\cb3 $19.990\cb1 </div>\
+\
+          <div class="store-badge">\
+            <img class="logo-img l6" src=\'93\cb3 SAO P1 LOGO PARIS\cb1 \'94 alt=\'93\cb3 Paris logo\cb1 \'94>\
+          </div>\
+        </a>\
+      </article>\
+\
+    \cb3   <!-- Product 5 -->\cb1 \
+      <article class="card">\
+        <a class="card-link" href="\cb3 https://www.lider.cl/ip/impresion/impresora-multifuncional-laser-dcp1602-negro/00001250263976?from=/search\cb1 " target="_blank" rel="noopener">\
+          <div class="badge-basket">
+\f2 \uc0\u55357 \u57042 
+\f0 </div>\
+          <div class="stars" aria-hidden="true"><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div></div>\
+\
+          <div class="prod-circle">\
+            <img class="prod-img sheet p5" src="\cb3 SAO PP05.svg\cb1 \'94 alt=\'93\cb3 IMPRESORA DCP1602 LASER BROTHER\cb1 \'94>\
+          </div>\
+\
+          <h3 class="prod-title">\cb3 IMPRESORA DCP1602 LASER BROTHER\cb1 </h3>\
+          <div class="prod-price">\cb3 $109.990\cb1 </div>\
+\
+          <div class="store-badge">\
+            <img class="logo-img l9" src=\'93\cb3 SAO P1 LOGO LIDER.svg\cb1 \'94 alt=\cb3 \'93Lider logo\'94\cb1 >\
+          </div>\
+        </a>\
+      </article>\
+\
+      <!-- Product 6 -->\
+      <article class="card">\
+        <a class="card-link" href="\cb3 https://www.lider.cl/ip/maquillaje/set-de-maquillaje-etienne-all-in-one-creative/00780490204974\cb1 " target="_blank" rel="noopener">\
+          <div class="badge-basket">
+\f2 \uc0\u55357 \u57042 
+\f0 </div>\
+          <div class="stars" aria-hidden="true"><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div></div>\
+\
+          <div class="prod-circle">\
+            <img class="prod-img sheet p6" src="\cb3 SAO PP06.svg\cb1 \'94 alt="\cb3 SET MAQUILLAJE CREATIVE ETIENNE\cb1 ">\
+          </div>\
+\
+          <h3 class="prod-title">\cb3 SET MAQUILLAJE CREATIVE ETIENNE\cb1 </h3>\
+          <div class="prod-price">\cb3 $15.990\cb1 </div>\
+\
+          <div class="store-badge">\
+            <img class="logo-img l10" src=\'93\cb3 SAO P1 LOGO LIDER.svg\cb1 \'94 alt=\'93\cb3 Lider logo\'94\cb1 >\
+        </a>\
+      </article>\
+\
+\cb3       <!-- Product 7 -->\cb1 \
+      <article class="card">\
+        <a class="card-link" href="\cb3 https://javer.cl/producto/perfume-pepe-jeans-cocktail-edt-mujer/\cb1 " target="_blank" rel="noopener">\
+          <div class="badge-basket">
+\f2 \uc0\u55357 \u57042 
+\f0 </div>\
+          <div class="stars" aria-hidden="true"><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div></div>\
+\
+          <div class="prod-circle">\
+            <img class="prod-img sheet p7" src="\cb3 SAO PP07.svg\cb1 \'94 alt=\'93\cb3 PERFUME COCTAIL PEPE JEANS\cb1 \'94>\
+          </div>\
+\
+          <h3 class="prod-title">\cb3 PERFUME COCTAIL PEPE JEANS\cb1 </h3>\
+          <div class="prod-price">\cb3 $21.990\cb1 </div>\
+\
+          <div class="store-badge">\
+            <img class="logo-img l9" src=\'93\cb3 SAO P1 LOGO JAVER.svg\cb1 \'94  alt=\'93\cb3 Javer logo\cb1 \'94>\
+          </div>\
+        </a>\
+      </article>\
+\
+      \cb3 <!-- Product 8 -->\cb1 \
+      <article class="card">\
+        <a class="card-link" href="\cb3 https://suzuval.cl/\cb1 " target="_blank" rel="noopener">\
+          <div class="badge-basket">
+\f2 \uc0\u55357 \u57042 
+\f0 </div>\
+          <div class="stars" aria-hidden="true"><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div></div>\
+\
+          <div class="prod-circle">\
+            <img class="prod-img sheet p8" src="\cb3 SAO PP08.svg\cb1 \'94 alt="\cb3 DERCO CENTER SUZUVAL\cb1 ">\
+          </div>\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \cb4 \
+\cb1           <h3 class="prod-title">\cb3 DERCO CENTER SUZUVAL\cb1 </h3>\
+          <div class="prod-price">\cb3 SAN ANTONIO\cb1 </div>\
+\
+          <div class="store-badge">\
+            <img class="logo-img l11" src=\'93\cb3 SAO P1 LOGO SUZUVAL\cb1 \'94 alt=\'93\cb3 Suzuval logo\cb1 \'94>\
+          </div>\
+        </a>\
+      </article>\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \cb3       <!-- Product 9 -->\cb1 \
+      <article class="card">\
+        <a class="card-link" href="\cb3 https://sodimac.falabella.com/sodimac-cl/product/110177133/Bateria-de-Auto-60-Ah-Positivo-Derecho-470-CCA/110177164\cb1 " target="_blank" rel="noopener">\
+          <div class="badge-basket">
+\f2 \uc0\u55357 \u57042 
+\f0 </div>\
+          <div class="stars" aria-hidden="true"><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div></div>\
+\
+          <div class="prod-circle">\
+            <img class="prod-img sheet p9" src="\cb3 SAO PP09.svg\cb1 \'94 alt="\cb3 BATER\'cdA DE AUTO 45 AH AUTOSTYLE\cb1 ">\
+          </div>\
+\
+          <h3 class="prod-title">\cb3 BATER\'cdA DE AUTO 45 AH AUTOSTYLE\cb1 </h3>\
+          <div class="prod-price">\cb3 $69.990\cb1 </div>\
+\
+          <div class="store-badge">\
+            <img class="logo-img l11" src=\'93\cb3 SAO P1 LOGO SODIMAC.svg\cb1 \'94 alt=\'93\cb3 Sodimac logo\'94\cb1 >\
+          </div>\
+        </a>\
+      </article>\
+\
+      \cb3 <!-- Product 10 -->\cb1 \
+      <article class="card">\
+        <a class="card-link" href="\cb3 https://www.falabella.com/falabella-cl/product/50067059/Protector-Solar-Rostro-Anthelios-UV-Mune-400-FPS-50+-50-ml-La-Roche-Posay/50067059\cb1 " target="_blank" rel="noopener">\
+          <div class="badge-basket">
+\f2 \uc0\u55357 \u57042 
+\f0 </div>\
+          <div class="stars" aria-hidden="true"><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div></div>\
+\
+          <div class="prod-circle">\
+            <img class="prod-img sheet p10" src="\cb3 SAO PP10.svg\cb1 \'94 alt="\cb3 PROTECTOR SOLAR 50 FPS 50 ML LA ROCHE POSEY\'94\cb1 >\
+          </div>\
+\
+          <h3 class="prod-title">\cb3 PROTECTOR SOLAR 50 FPS 50 ML LA ROCHE POSEY\cb1 </h3>\
+          <div class="prod-price">\cb3 $17.990\cb1 </div>\
+\
+          <div class="store-badge">\
+            <img class="logo-img l11" src=\'93\cb3 SAO P1 LOGO FALABELLA.svg\cb1 \'94 alt=\'93\cb3 Falabella logo\cb1 >\
+          </div>\
+        </a>\
+      </article>\
+\
+     \cb3  <!-- Product 11 -->\cb1 \
+      <article class="card">\
+        <a class="card-link" href="\cb3 https://web.facebook.com/profile.php?id=100085052449373\cb1 " target="_blank" rel="noopener">\
+          <div class="badge-basket">
+\f2 \uc0\u55357 \u57042 
+\f0 </div>\
+          <div class="stars" aria-hidden="true"><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div></div>\
+\
+          <div class="prod-circle">\
+            <img class="prod-img sheet p11" src="\cb3 SAO PP11.svg\cb1 \'94 alt="\cb3 VETERINARIA FAUNA PUERTO\cb1 ">\
+          </div>\
+\
+          <h3 class="prod-title">\cb3 VETERINARIA FAUNA PUERTO\cb1 </h3>\
+          <div class="prod-price">\cb3 SAN ANTONIO\cb1 </div>\
+\
+          <div class="store-badge">\
+            <img class="logo-img l4" src=\'93\cb3 SAO P1 LOGO FAUNA PUERTO.svg\cb1 \'94 alt=\'93\cb3 FaunaPuerto logo\cb1 ">\
+          </div>\
+        </a>\
+      </article>\
+\
+   \cb3    <!-- Product 12 -->\cb1 \
+      <article class="card">\
+        <a class="card-link" href="\cb3 https://javer.cl/producto/set-manicure-12-accesorios-gama/\cb1 " target="_blank" rel="noopener">\
+          <div class="badge-basket">
+\f2 \uc0\u55357 \u57042 
+\f0 </div>\
+          <div class="stars" aria-hidden="true"><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div><div class="star">
+\f3 \'a1\'ef
+\f0 </div></div>\
+\
+          <div class="prod-circle">\
+            <img class="prod-img sheet p12" src="\cb3 SAO PP\'9412.svg\cb1 \'94 alt="\cb3 SET DE MANICURE 12 PZS GAMA\cb1 ">\
+          </div>\
+\
+          <h3 class="prod-title">\cb3 SET DE MANICURE 12 PZS GAMA\cb1 </h3>\
+          <div class="prod-price">\cb3 $29.990\cb1 </div>\
+\
+          <div class="store-badge">\
+            <img class="logo-img l11" src=\'93\cb3 SAO P1 LOGO JAVER.svg\cb1 \'94 alt="\cb3 Javer logo\cb1 ">\
+          </div>\
+        </a>\
+      </article>\
+\
+    </section>\
+\
+    <div class=\cb3 "hashtags\cb1 ">\
+      \cb3 #chile #ciudaddesanantonio #sanantonio #puerto #puertosanantonio #ciudadpuerto #ecommerce #dropshipping #mercadodigital #ventas #ventadigital #delivery #tiendas #marketingdigital #publicidad #productos #empresas #pymes #javer #paris #falabella #lapolar #tricot #sodimac #abcdin #lider #tottus #santaisabel #camaradecomercio\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \cb1     </div>\
+\
+    <div class="\cb3 foote\cb1 r">\cb3 \'a92025 San Antonio Online \'97 E-Commerce \'97 Todos los derechos reservados.\cb1 </div>\
+  </div>\
+</body>\
+</html>\
+}
